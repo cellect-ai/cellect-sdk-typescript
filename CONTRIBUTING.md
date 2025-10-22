@@ -42,15 +42,15 @@ If you’d like to use the repository from source, you can either install from g
 To install via git:
 
 ```sh
-$ npm install git+ssh://git@github.com:stainless-sdks/cellect-typescript.git
+$ npm install git+ssh://git@github.com:cellect-ai/cellect-sdk-typescript.git
 ```
 
 Alternatively, to link a local copy of the repo:
 
 ```sh
 # Clone
-$ git clone https://www.github.com/stainless-sdks/cellect-typescript
-$ cd cellect-typescript
+$ git clone https://www.github.com/cellect-ai/cellect-sdk-typescript
+$ cd cellect-sdk-typescript
 
 # With yarn
 $ yarn link
