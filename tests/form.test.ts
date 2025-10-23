@@ -1,5 +1,5 @@
-import { multipartFormRequestOptions, createForm } from 'cellect/internal/uploads';
-import { toFile } from 'cellect/core/uploads';
+import { multipartFormRequestOptions, createForm } from 'cellectai/internal/uploads';
+import { toFile } from 'cellectai/core/uploads';
 
 describe('form data validation', () => {
   test('valid values do not error', async () => {

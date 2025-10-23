@@ -5,8 +5,8 @@
   "compilerOptions": {
     "rootDir": "./dist/src",
     "paths": {
-      "cellect/*": ["./dist/src/*"],
-      "cellect": ["./dist/src/index.ts"]
+      "cellectai/*": ["./dist/src/*"],
+      "cellectai": ["./dist/src/index.ts"]
     },
     "noEmit": false,
     "declaration": true,

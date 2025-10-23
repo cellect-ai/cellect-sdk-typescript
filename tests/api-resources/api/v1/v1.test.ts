@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import Cellect, { toFile } from 'cellect';
+import Cellect, { toFile } from 'cellectai';
 
 const client = new Cellect({
   apiKey: 'My API Key',
