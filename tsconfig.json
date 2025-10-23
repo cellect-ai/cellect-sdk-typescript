@@ -8,8 +8,8 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "paths": {
-      "cellect/*": ["./src/*"],
-      "cellect": ["./src/index.ts"]
+      "cellectai/*": ["./src/*"],
+      "cellectai": ["./src/index.ts"]
     },
     "noEmit": true,
 

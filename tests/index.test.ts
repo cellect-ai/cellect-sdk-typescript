@@ -1,10 +1,10 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIPromise } from 'cellect/core/api-promise';
+import { APIPromise } from 'cellectai/core/api-promise';
 
 import util from 'node:util';
-import Cellect from 'cellect';
-import { APIUserAbortError } from 'cellect';
+import Cellect from 'cellectai';
+import { APIUserAbortError } from 'cellectai';
 const defaultFetch = fetch;
 
 describe('instantiate client', () => {
