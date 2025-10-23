@@ -55,12 +55,12 @@ $ cd cellect-sdk-typescript
 # With yarn
 $ yarn link
 $ cd ../my-package
-$ yarn link cellect
+$ yarn link cellectai
 
 # With pnpm
 $ pnpm link --global
 $ cd ../my-package
-$ pnpm link -—global cellect
+$ pnpm link -—global cellectai
 ```
 
 ## Running tests

@@ -1,6 +1,6 @@
 {
-  "name": "cellect",
-  "version": "0.5.0",
+  "name": "cellectai",
+  "version": "0.5.1",
   "description": "The official TypeScript library for the Cellect API",
   "author": "Cellect <>",
   "types": "dist/index.d.ts",

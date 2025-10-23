@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { Cellect } from 'cellect';
+import { Cellect } from 'cellectai';
 
 const { stringifyQuery } = Cellect.prototype as any;
 
