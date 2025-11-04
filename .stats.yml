@@ -1,4 +1,4 @@
 configured_endpoints: 9
-openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/cellect%2Fcellect-9e845265092abbac8fc884e2b4b77be95e97e90fcd7900b9fe556bb88f16e89e.yml
-openapi_spec_hash: 265ef3268d9d1933514a20070b374817
+openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/cellect%2Fcellect-b4bae0ce9643a85cfc40a51d715a8085518641d574ab6866963d125d76c4c6be.yml
+openapi_spec_hash: e44e5df6367037b7470917cd44f9e99b
 config_hash: df287c46a715cd2a052e1bcbeafc4716
