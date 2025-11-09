@@ -106,7 +106,11 @@ describe('resource project', () => {
   test.skip('getStatus: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
-      client.api.v1.project.getStatus('project_id', { response: true }, { path: '/_stainless_unknown_path' }),
+      client.api.v1.project.getStatus(
+        'project_id',
+        { include_progress: true, response: true },
+        { path: '/_stainless_unknown_path' },
+      ),
     ).rejects.toThrow(Cellect.NotFoundError);
   });
 });
