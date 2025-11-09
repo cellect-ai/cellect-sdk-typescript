@@ -63,7 +63,12 @@ export class Project extends APIResource {
   /**
    * Get the current agent status for a project.
    *
-   * Returns the agent's current status and optionally the final response text.
+   * Returns the agent's current status and optionally the final response text and
+   * progress messages.
+   *
+   * Args: response: If True, include the final response text (default: False)
+   * include_progress: If True, include progress messages since last sync (default:
+   * False)
    */
   getStatus(
     projectID: string,
@@ -115,6 +120,8 @@ export interface ProjectDownloadParams {
 }
 
 export interface ProjectGetStatusParams {
+  include_progress?: boolean;
+
   response?: boolean;
 }
 
