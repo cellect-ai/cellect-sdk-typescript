@@ -22,7 +22,10 @@ describe('resource project', () => {
 
   // Prism tests are disabled
   test.skip('create: required and optional params', async () => {
-    const response = await client.api.v1.project.create({ project_name: 'project_name' });
+    const response = await client.api.v1.project.create({
+      project_name: 'project_name',
+      params: { foo: 'bar' },
+    });
   });
 
   // Prism tests are disabled
