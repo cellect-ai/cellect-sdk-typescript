@@ -49,6 +49,7 @@ describe('resource v1', () => {
       file: await toFile(Buffer.from('# my file contents'), 'README.md'),
       project_id: 'project_id',
       crack: true,
+      params: 'params',
     });
   });
 });

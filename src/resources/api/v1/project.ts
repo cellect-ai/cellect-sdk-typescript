@@ -107,6 +107,11 @@ export interface ProjectCreateParams {
    * Project name
    */
   project_name: string;
+
+  /**
+   * Additional parameters defining project behavior
+   */
+  params?: { [key: string]: unknown };
 }
 
 export interface ProjectApplyTransformParams {

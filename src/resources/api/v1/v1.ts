@@ -62,6 +62,8 @@ export interface V1UploadFileParams {
   project_id: string;
 
   crack?: boolean;
+
+  params?: string;
 }
 
 V1.Project = Project;
