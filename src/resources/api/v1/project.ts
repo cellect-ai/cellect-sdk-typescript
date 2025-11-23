@@ -117,6 +117,8 @@ export interface ProjectCreateParams {
 
 export interface ProjectApplyTransformParams {
   prompt: string;
+
+  turn_rephrase_mode?: string | null;
 }
 
 export interface ProjectDownloadParams {
