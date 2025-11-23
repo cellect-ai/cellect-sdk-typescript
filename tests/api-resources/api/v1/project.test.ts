@@ -66,7 +66,10 @@ describe('resource project', () => {
 
   // Prism tests are disabled
   test.skip('applyTransform: required and optional params', async () => {
-    const response = await client.api.v1.project.applyTransform('project_id', { prompt: 'prompt' });
+    const response = await client.api.v1.project.applyTransform('project_id', {
+      prompt: 'prompt',
+      turn_rephrase_mode: 'turn_rephrase_mode',
+    });
   });
 
   // Prism tests are disabled
