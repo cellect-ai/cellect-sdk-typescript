@@ -114,7 +114,11 @@ describe('resource project', () => {
     await expect(
       client.api.v1.project.getStatus(
         'project_id',
-        { include_progress: true, include_usage: true, response: true },
+        {
+          include_progress: true,
+          include_usage: true,
+          response: true,
+        },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(Cellect.NotFoundError);

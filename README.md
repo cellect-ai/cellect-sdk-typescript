@@ -62,13 +62,19 @@ import Cellect, { toFile } from 'cellectai';
 const client = new Cellect();
 
 // If you have access to Node `fs` we recommend using `fs.createReadStream()`:
-await client.api.v1.uploadFile({ file: fs.createReadStream('/path/to/file'), project_id: 'project_id' });
+await client.api.v1.uploadFile({
+  file: fs.createReadStream('/path/to/file'),
+  project_id: 'project_id',
+});
 
 // Or if you have the web `File` API you can pass a `File` instance:
 await client.api.v1.uploadFile({ file: new File(['my bytes'], 'file'), project_id: 'project_id' });
 
 // You can also pass a `fetch` `Response`:
-await client.api.v1.uploadFile({ file: await fetch('https://somesite/file'), project_id: 'project_id' });
+await client.api.v1.uploadFile({
+  file: await fetch('https://somesite/file'),
+  project_id: 'project_id',
+});
 
 // Finally, if none of the above are convenient, you can use our `toFile` helper:
 await client.api.v1.uploadFile({
