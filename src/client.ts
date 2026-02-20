@@ -200,10 +200,10 @@ export class Cellect {
   }
 
   /**
-   * Health check endpoint.
+   * Server info page.
    */
-  healthCheck(options?: RequestOptions): APIPromise<unknown> {
-    return this.get('/', options);
+  healthCheck(options?: RequestOptions): APIPromise<string> {
+    return this.get('/', { ...options, headers: buildHeaders([{ Accept: 'text/html' }, options?.headers]) });
   }
 
   protected defaultQuery(): Record<string, string | undefined> | undefined {
@@ -212,10 +212,6 @@ export class Cellect {
 
   protected validateHeaders({ values, nulls }: NullableHeaders) {
     return;
-  }
-
-  protected async authHeaders(opts: FinalRequestOptions): Promise<NullableHeaders | undefined> {
-    return buildHeaders([{ 'X-API-Key': this.apiKey }]);
   }
 
   /**
@@ -656,7 +652,6 @@ export class Cellect {
         ...(options.timeout ? { 'X-Stainless-Timeout': String(Math.trunc(options.timeout / 1000)) } : {}),
         ...getPlatformHeaders(),
       },
-      await this.authHeaders(options),
       this._options.defaultHeaders,
       bodyHeaders,
       options.headers,
