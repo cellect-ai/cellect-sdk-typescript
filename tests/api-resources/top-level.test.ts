@@ -8,7 +8,7 @@ const client = new Cellect({
 });
 
 describe('top level methods', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('healthCheck', async () => {
     const responsePromise = client.healthCheck();
     const rawResponse = await responsePromise.asResponse();
