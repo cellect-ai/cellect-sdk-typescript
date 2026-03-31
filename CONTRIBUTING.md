@@ -60,7 +60,7 @@ $ yarn link cellectai
 # With pnpm
 $ pnpm link --global
 $ cd ../my-package
-$ pnpm link -—global cellectai
+$ pnpm link --global cellectai
 ```
 
 ## Running tests
