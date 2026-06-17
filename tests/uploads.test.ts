@@ -1,7 +1,6 @@
 import fs from 'fs';
 import type { ResponseLike } from 'cellectai/internal/to-file';
 import { toFile } from 'cellectai/core/uploads';
-import { File } from 'node:buffer';
 
 class MyClass {
   name: string = 'foo';

@@ -22,9 +22,7 @@ The full API of this library can be found in [api.md](api.md).
 ```js
 import Cellect from 'cellectai';
 
-const client = new Cellect({
-  apiKey: process.env['CELLECT_API_KEY'], // This is the default and can be omitted
-});
+const client = new Cellect();
 
 const response = await client.healthCheck();
 ```
@@ -37,49 +35,12 @@ This library includes TypeScript definitions for all request params and response
 ```ts
 import Cellect from 'cellectai';
 
-const client = new Cellect({
-  apiKey: process.env['CELLECT_API_KEY'], // This is the default and can be omitted
-});
+const client = new Cellect();
 
-const response: unknown = await client.healthCheck();
+const response: string = await client.healthCheck();
 ```
 
 Documentation for each method, request param, and response field are available in docstrings and will appear on hover in most modern editors.
-
-## File uploads
-
-Request parameters that correspond to file uploads can be passed in many different forms:
-
-- `File` (or an object with the same structure)
-- a `fetch` `Response` (or an object with the same structure)
-- an `fs.ReadStream`
-- the return value of our `toFile` helper
-
-```ts
-import fs from 'fs';
-import Cellect, { toFile } from 'cellectai';
-
-const client = new Cellect();
-
-// If you have access to Node `fs` we recommend using `fs.createReadStream()`:
-await client.api.v1.uploadFile({ file: fs.createReadStream('/path/to/file'), project_id: 'project_id' });
-
-// Or if you have the web `File` API you can pass a `File` instance:
-await client.api.v1.uploadFile({ file: new File(['my bytes'], 'file'), project_id: 'project_id' });
-
-// You can also pass a `fetch` `Response`:
-await client.api.v1.uploadFile({ file: await fetch('https://somesite/file'), project_id: 'project_id' });
-
-// Finally, if none of the above are convenient, you can use our `toFile` helper:
-await client.api.v1.uploadFile({
-  file: await toFile(Buffer.from('my bytes'), 'file'),
-  project_id: 'project_id',
-});
-await client.api.v1.uploadFile({
-  file: await toFile(new Uint8Array([0, 1, 2]), 'file'),
-  project_id: 'project_id',
-});
-```
 
 ## Handling errors
 
@@ -125,6 +86,7 @@ You can use the `maxRetries` option to configure or disable this:
 ```js
 // Configure the default for all requests:
 const client = new Cellect({
+  apiKey: 'My API Key',
   maxRetries: 0, // default is 2
 });
 
@@ -142,6 +104,7 @@ Requests time out after 1 minute by default. You can configure this with a `time
 ```ts
 // Configure the default for all requests:
 const client = new Cellect({
+  apiKey: 'My API Key',
   timeout: 20 * 1000, // 20 seconds (default is 1 minute)
 });
 
